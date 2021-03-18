@@ -1,4 +1,5 @@
 package ro.ase.cts.program;
+import ro.ase.cts.clase.Budinca;
 import ro.ase.cts.clase.ManagerSpital;
 import ro.ase.cts.clase.ManagerSpitalLazy;
 
@@ -17,6 +18,12 @@ public class Program {
 		
 		System.out.println(managerLazy1.toString());
 		System.out.println(managerLazy2.toString());
+		
+		Budinca budinca = Budinca.getInstance("capsuni", 500, true);
+		Budinca budinca2 = Budinca.getInstance("afine", 150, false);
+		
+		System.out.println(budinca.toString());
+		System.out.println(budinca2.toString());
 	}
 
 }
