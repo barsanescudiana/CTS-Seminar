@@ -3,22 +3,27 @@ package ro.ase.cts.program;
 import java.io.FileNotFoundException;
 import java.util.List;
 
+import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
-import ro.ase.cts.clase.readers.AngajatReader;
-import ro.ase.cts.clase.readers.AplicantReader;
+import ro.ase.cts.clase.Elev;
+import ro.ase.cts.clase.Proiect;
+import ro.ase.cts.clase.UniversalReader;
+import ro.ase.cts.clase.readers.EmployeeReader;
+import ro.ase.cts.clase.readers.StudentReader;
 
 public class Program {
 
-	public static List<Aplicant> readAplicanti (AplicantReader reader) throws FileNotFoundException {
-		return reader.readAplicanti();
-	}
-	
 	public static void main(String[] args) {
-		List<Aplicant> listaAngajati;
+		System.out.println(Elev.getFinantare());
+		List<Aplicant> listaAplicanti;
 		try {
-			listaAngajati = readAplicanti(new AngajatReader("angajati.txt"));
-			for(Aplicant angajat:listaAngajati)
-				System.out.println(angajat.toString());
+			listaAplicanti = UniversalReader.readAplicants(new EmployeeReader("angajati.txt"));
+			Proiect proiect = new Proiect(83);
+			for (Aplicant aplicant : listaAplicanti) {
+				System.out.println(aplicant.toString());
+				System.out.println(aplicant.getSumaFinantata());
+				aplicant.afisareStatusInProiect(proiect);
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,5 +31,3 @@ public class Program {
 	}
 
 }
-
-
