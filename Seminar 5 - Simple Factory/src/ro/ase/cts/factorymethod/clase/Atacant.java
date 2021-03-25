@@ -1,4 +1,4 @@
-package ro.ase.cts.simplefactory.clase;
+package ro.ase.cts.factorymethod.clase;
 
 public class Atacant extends Jucator{
 

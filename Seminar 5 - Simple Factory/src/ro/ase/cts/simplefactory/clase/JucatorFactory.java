@@ -1,4 +1,4 @@
-package ro.ase.cts.clase;
+package ro.ase.cts.simplefactory.clase;
 
 public class JucatorFactory {
 	public static Jucator createJucator(TipJucator tipJucator, String nume) throws Exception {
