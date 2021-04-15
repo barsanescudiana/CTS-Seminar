@@ -26,6 +26,10 @@ public class Program {
 		
 		meniu.afiseazaInformatii();
 	
+		sectiuneBauturi.stergereNod(frappe);
+		sectiuneDesert.adaugareNod(frappe);
+		
+		meniu.afiseazaInformatii();
 
 	}
 
