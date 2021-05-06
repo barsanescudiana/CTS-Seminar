@@ -13,10 +13,11 @@ public class Program {
 		ContBancar cont = new ContBancar("Diana");
 		ManagerComenzi manager = new ManagerComenzi();
 		manager.invoca(new ComandaConstituire(cont, 500));
-		manager.invoca(new ComandaDepunere(cont, 500));
+		manager.invoca(new ComandaDepunere(cont, 50));
 		manager.executaComanda();
-		
-		manager.invoca(new ComandaRetragere(cont, 150));
+		manager.invoca(new ComandaRetragere(cont, 600));
+		manager.invoca(new ComandaDepunere(cont, 300));
+		manager.executaComanda();
 		manager.executaComanda();
 	}
 
