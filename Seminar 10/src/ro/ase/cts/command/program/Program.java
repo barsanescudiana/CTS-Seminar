@@ -16,7 +16,6 @@ public class Program {
 		manager.invoca(new ComandaDepunere(cont, 50));
 		manager.executaComanda();
 		manager.invoca(new ComandaRetragere(cont, 200));
-		manager.invoca(new ComandaDepunere(cont, 300));
 		manager.executaComanda();
 		manager.executaComanda();
 	}
