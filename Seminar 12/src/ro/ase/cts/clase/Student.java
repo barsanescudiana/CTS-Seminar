@@ -30,7 +30,12 @@ public class Student {
     }
 
     public void adaugaNota(int nota){
-        note.add(nota);
+        if(nota > 0 && nota <= 10) {
+        	note.add(nota);
+        } else {
+        	throw new IllegalArgumentException("Nota incorecta");
+        }
+
     }
 
     public int getNota(int index){
